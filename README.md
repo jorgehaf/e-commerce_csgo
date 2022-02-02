@@ -21,17 +21,15 @@ Além disto é bom ter um editor para trabalhar com o código como [VSCode](http
 $ git clone https://github.com/jorgehaf/e-commerce.git
 
 <h3>Acesse a pasta do projeto no terminal/cmd</h3>
-<h3># Instale as dependências</h3>
+<h3>Instale as dependências</h3>
 $ npm install
 
 <h3>Execute a aplicação em modo de desenvolvimento</h3>
 $ npm run start
 
-<h3>O e-commerce inciará na porta:3000 - acesse <http://localhost:3000></h3>
+<h3>O e-commerce inciará na porta:3000 - acesse <a href="http://localhost:3000">http://localhost:3000</a></h3>
 
-
-### 🛠 Tecnologias
-
+<h3>🛠 Tecnologias</h3>
 As seguintes ferramentas foram usadas na construção do projeto:
 
 - [Node.js](https://nodejs.org/en/)
