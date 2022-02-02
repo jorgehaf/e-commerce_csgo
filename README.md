@@ -1,12 +1,12 @@
 <h1>e-commerce</h1>
-<p>Esse projeto será construído com a intenção de praticar minhas novas habilidades em React, que foram aprendidas no bootcamp da <a href="https://web.dio.me/">DIO</a>.</p>
+<p>Esse é meu primeiro projeto criado em react, ele será construído com a intenção de praticar minhas novas habilidades em React, que foram aprendidas no bootcamp da <a href="https://web.dio.me/">DIO</a>.</p>
 <p>A princípio serão criadas duas telas, Home e Cart, que serão respectivamente a página de compras e a parte do carrinho, para finalizar o pedido.</p>
 
 
 <h2>Status do Projeto</h2>
-<h5> 
+<h4> 
 	🚧  React 🚀 Em construção...  🚧
-</h5>
+</h4>
 
 <h2>Pré-requisitos</h2>
 <p>
