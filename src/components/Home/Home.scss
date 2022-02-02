@@ -1,0 +1,17 @@
+.main {
+    display: flex;
+    flex-direction: row;
+    nav {
+        ul{
+            list-style: none;
+            li{
+                margin: 8px;
+                padding: 8px;
+                cursor: pointer;
+            }
+        }
+    }
+    main{
+        
+    }
+}

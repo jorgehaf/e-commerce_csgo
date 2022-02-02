@@ -1,28 +1,33 @@
 import React, { useState } from 'react'
 
 import {
-    Route,
-    Routes
+  Route,
+  Routes
 } from 'react-router-dom'
 
-import Header from './components/Header/Header'
+import Header from './components/Header/Header';
 import Home from './components/Home/Home'
 import Cart from './components/Cart/Cart'
+import './App.css'
 
-function App() {
-  return (
-    <>
-      <Header/>
+
+const App = () => {
+  
+  return(
+    <div id='app'>
+      <Header />
       <Routes>
-        <Route exact path='/' element={
+        <Route path = "/"
+        element = {
           <Home/>
         }/>
-        <Route exact path='/carrinho' element={
+        <Route path = "/Cart"
+        element = {
           <Cart/>
         }/>
       </Routes>
-    </>
-  );
+    </div>
+  )
 }
 
 export default App;

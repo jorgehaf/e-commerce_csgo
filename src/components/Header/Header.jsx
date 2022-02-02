@@ -1,8 +1,23 @@
-const Header = () =>{
+import "./Header.scss"
+
+const Header = () => {
     return (
-        <>
-            <h1>teste</h1>
-        </>
+        <header className="header">
+            <div className="logo">
+                <a href="/" id="title">
+                    JORGIN GUNS
+                </a>
+                <div id="description">The better at cenary!</div>
+            </div>
+            <div className="account">
+                <a href="/cart">
+                    <div>Cart</div>
+                </a>
+                <a href="">
+                    <div>My account</div>
+                </a>
+            </div>
+        </header>
     )
 }
 
