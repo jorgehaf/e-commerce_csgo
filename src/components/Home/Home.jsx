@@ -1,14 +1,23 @@
 import React, { useState, useEffect } from 'react'
+import axios from "axios";
 
-import services from "../../services"
+// import services from "../../services"
 import "./Home.scss"
 
 const Home = () => {
-    const numbers = [1, 2, 3, 4, 5];
+    const [skins, setSkins] = useState([]);
 
     useEffect(() => {
-        console.log(services.skins.getSkins())
-        // services.skins.getSkins()
+        const carregarSkins = async () => {
+            const resposta = await axios.get("apiFake.json").then((suc) => { return suc.data }).catch((err) => { console.log(err) });
+            resposta.skins.forEach((el) => {
+                console.log(el)
+            })
+            setSkins(s => [... s, resposta.skins])
+            // setSkins(skins = resposta.skins)
+            console.log(skins)
+        }
+        carregarSkins();
     }, []);
 
     return (
@@ -22,7 +31,10 @@ const Home = () => {
             </nav>
             <main>
                 <div>
-                    {numbers.map((number) => <div>{number}</div>)}
+                    {skins}
+                    {/* {skins.map((army) => 
+                        <div>{army.name}</div>
+                    )} */}
                 </div>
             </main>
         </div>
