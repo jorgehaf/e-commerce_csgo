@@ -12,6 +12,7 @@ const Home = () => {
             const resposta = await axios.get("apiFake.json").then((suc) => { return suc.data }).catch((err) => { console.log(err) });
             resposta.skins.forEach((el) => {
                 console.log(el)
+                // setSkins([... resposta.skins])
             })
             setSkins(s => [... s, resposta.skins])
             // setSkins(skins = resposta.skins)
