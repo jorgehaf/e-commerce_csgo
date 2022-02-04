@@ -1,17 +1,38 @@
-.main {
+.home {
     display: flex;
     flex-direction: row;
-    nav {
-        ul{
-            list-style: none;
-            li{
-                margin: 8px;
-                padding: 8px;
+
+    #nav {
+        background-color: #19211f;
+        color: #F0F3F5;
+
+        #navBar {
+            .itemNav {
+                margin: 32px;
                 cursor: pointer;
             }
         }
     }
-    main{
+
+    #collectionCard {
+        background-color: #F0F3F5;
+        display: flex;
+        padding: 16px;
         
+        #collectionArmy {
+            display: flex;
+            flex-wrap: wrap;
+            grid-gap: 16px;
+
+            .cardArmy {
+                background-color: #7C7A7A;
+                height: 300px;
+                width: 300px;
+                border-radius: 4px;
+                box-shadow: 0 0 3px rgba(0, 0, 0, 0.885);
+
+            }
+        }
     }
+
 }
