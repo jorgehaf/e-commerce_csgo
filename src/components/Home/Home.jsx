@@ -10,13 +10,8 @@ const Home = () => {
     useEffect(() => {
         const carregarSkins = async () => {
             const resposta = await axios.get("apiFake.json").then((suc) => { return suc.data }).catch((err) => { console.log(err) });
-            resposta.skins.forEach((el) => {
-                console.log(el)
-                // setSkins([... resposta.skins])
-            })
-            setSkins(s => [... s, resposta.skins])
-            // setSkins(skins = resposta.skins)
-            console.log(skins)
+            
+            setSkins(skins.concat(resposta.skins))
         }
         carregarSkins();
     }, []);
@@ -32,10 +27,9 @@ const Home = () => {
             </nav>
             <main>
                 <div>
-                    {skins}
-                    {/* {skins.map((army) => 
-                        <div>{army.name}</div>
-                    )} */}
+                    {skins.map((army) => 
+                        <div key={army.id}>{army.name}{army.price}</div>
+                    )}
                 </div>
             </main>
         </div>
