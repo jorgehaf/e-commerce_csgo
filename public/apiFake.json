@@ -5,7 +5,7 @@
             "model": "",
             "category": 1,
             "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRxHNCrtbLwDHMVKWFaDAzluXixne4-fAjIHQ&usqp=CAU",
-            "price": "$65",
+            "price": 65,
             "stock": 9
         },
         {
@@ -14,7 +14,7 @@
             "model": "",
             "category": 1,
             "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRDH7PbvCKSkfr_9Za2QsALnoHyLDW6Fa0TxA&usqp=CAU",
-            "price": "$12",
+            "price": 12,
             "stock": 32
         },
         {
@@ -23,7 +23,7 @@
             "model": "",
             "category": 1,
             "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQDZQOY3kwpxsCK_bHojrxwEWGPo2-tFfeE-g&usqp=CAU",
-            "price": "$16",
+            "price": 16,
             "stock": 29
         },
         {
@@ -32,7 +32,7 @@
             "model": "",
             "category": 1,
             "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQCPR8nONiT9QY8UshMvMuLU0vHIFevSAtqzQ&usqp=CAU",
-            "price": "$22",
+            "price": 22,
             "stock": 46
         },
         {
@@ -41,7 +41,7 @@
             "model": "",
             "category": 1,
             "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS5X0bQPZVxPaQ4vha4Lzdvq-5aNEpHb6z1rQ&usqp=CAU",
-            "price": "$8",
+            "price": 8,
             "stock": 42
         },
         {
@@ -50,7 +50,7 @@
             "model": "",
             "category": 1,
             "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSp2h1iZlpfu5y_8-wRWscp77P0_Hp3_8vIAg&usqp=CAU",
-            "price": "$81",
+            "price": 81,
             "stock": 15
         },
         {
@@ -59,7 +59,7 @@
             "model": "",
             "category": 1,
             "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRrV-P4KBo1boHe8F6LcueJpXtAvPFePEEBfA&usqp=CAU",
-            "price": "$9",
+            "price": 9,
             "stock": 68
         },
         {
@@ -68,7 +68,7 @@
             "model": "",
             "category": 2,
             "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTws8QaQu-L1zEcDxyw77W1kdI2Dv0U8SDkGg&usqp=CAU",
-            "price": "$8",
+            "price": 8,
             "stock": 132
         },
         {
@@ -77,7 +77,7 @@
             "model": "",
             "category": 2,
             "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTOREC-Hc-BF3clX58x3pZDaPDZVYgF4rkXhw&usqp=CAU",
-            "price": "$12",
+            "price": 12,
             "stock": 95
         },
         {
@@ -86,7 +86,7 @@
             "model": "",
             "category": 3,
             "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSKd2Xuc2GzRRCsYsEjt5FGibV1OQewqCDDRA&usqp=CAU",
-            "price": "$8",
+            "price": 8,
             "stock": 88
         },
         {
@@ -95,7 +95,7 @@
             "model": "",
             "category": 3,
             "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTRQwnWdMQ6XWcRfVbfR96HLXdBN7vZ08AaKA&usqp=CAU",
-            "price": "$12",
+            "price": 12,
             "stock": 79
         }
     ]
