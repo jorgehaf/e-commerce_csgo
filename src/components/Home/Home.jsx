@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react'
 import axios from "axios";
 
+import ItemVenda from '../ItemVenda/ItemVenda';
 // import services from "../../services"
 import "./Home.scss"
 
@@ -25,13 +26,7 @@ const Home = () => {
                     <div className='itemNav'>SMG</div>
                 </div>
             </nav>
-            <div id="collectionCard">
-                <div id="collectionArmy">
-                    {skins.map((army) =>
-                        <div className='cardArmy' key={army.id}>{army.name}</div>
-                    )}
-                </div>
-            </div>
+            <ItemVenda skins={skins}/>
         </div>
     )
 }

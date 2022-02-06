@@ -15,24 +15,8 @@
     }
 
     #collectionCard {
-        background-color: #F0F3F5;
+        background-color: #7C7A7A;
         display: flex;
-        padding: 16px;
-        
-        #collectionArmy {
-            display: flex;
-            flex-wrap: wrap;
-            grid-gap: 16px;
-
-            .cardArmy {
-                background-color: #7C7A7A;
-                height: 300px;
-                width: 300px;
-                border-radius: 4px;
-                box-shadow: 0 0 3px rgba(0, 0, 0, 0.885);
-                cursor: pointer;
-            }
-        }
     }
 
 }
