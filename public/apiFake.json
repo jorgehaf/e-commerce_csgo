@@ -63,7 +63,7 @@
             "stock": 68
         },
         {
-            "id": 8,
+            "id": 20,
             "name": "Desert Eagle",
             "model": "",
             "category": 2,
@@ -72,7 +72,7 @@
             "stock": 132
         },
         {
-            "id": 9,
+            "id": 21,
             "name": "USP",
             "model": "",
             "category": 2,
@@ -81,7 +81,34 @@
             "stock": 95
         },
         {
-            "id": 10,
+            "id": 22,
+            "name": "USP",
+            "model": "",
+            "category": 2,
+            "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRH3vW7q0B5LDOsx_UWrRFt1aB8W1MZIHxWdQ&usqp=CAU",
+            "price": 16,
+            "stock": 65
+        },
+        {
+            "id": 23,
+            "name": "Revólver R8",
+            "model": "",
+            "category": 2,
+            "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRs-9VNJ4bjKkVrUzz4zy3KmbiZhgP5qE8Evw&usqp=CAU",
+            "price": 3,
+            "stock": 168
+        },
+        {
+            "id": 24,
+            "name": "Glock",
+            "model": "",
+            "category": 2,
+            "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSd5yBL9voUYZ7aBB87hBdmHtK8pHJJImSLtA&usqp=CAU",
+            "price": 5,
+            "stock": 120
+        },
+        {
+            "id": 40,
             "name": "MP5",
             "model": "",
             "category": 3,
@@ -90,13 +117,40 @@
             "stock": 88
         },
         {
-            "id": 11,
+            "id": 41,
             "name": "MP7",
             "model": "",
             "category": 3,
             "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTRQwnWdMQ6XWcRfVbfR96HLXdBN7vZ08AaKA&usqp=CAU",
             "price": 12,
             "stock": 79
+        },
+        {
+            "id": 42,
+            "name": "MAC-10",
+            "model": "",
+            "category": 3,
+            "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSG-NZV70jQLSwYHV2wt8TfDXhjT6-epVUdPA&usqp=CAU",
+            "price": 5,
+            "stock": 72
+        },
+        {
+            "id": 43,
+            "name": "MP9",
+            "model": "",
+            "category": 3,
+            "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRXQLW-xNVYIkx_PdIfDfhgbsW6_OkLMg_4pg&usqp=CAU",
+            "price": 4,
+            "stock": 56
+        },
+        {
+            "id": 44,
+            "name": "P90",
+            "model": "",
+            "category": 3,
+            "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQvg3rLTQVkwgboGAgX0mf2t16Bf2MsgYq5AQ&usqp=CAU",
+            "price": 2,
+            "stock": 113
         }
     ]
 }
