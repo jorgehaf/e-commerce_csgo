@@ -7,6 +7,7 @@ import "./Home.scss"
 
 const Home = () => {
     const [skins, setSkins] = useState([]);
+    const [categoryArmy, setCategoryArmy] = useState(1);
 
     useEffect(() => {
         const carregarSkins = async () => {
@@ -21,12 +22,12 @@ const Home = () => {
         <div className="home">
             <nav id="nav">
                 <div id='navBar'>
-                    <div className='itemNav'>Rifles</div>
-                    <div className='itemNav'>Pistolas</div>
-                    <div className='itemNav'>SMG</div>
+                    <div className='itemNav' onClick={() => setCategoryArmy(1)}>Rifles</div>
+                    <div className='itemNav' onClick={() => setCategoryArmy(2)}>Pistolas</div>
+                    <div className='itemNav' onClick={() => setCategoryArmy(3)}>SMG</div>
                 </div>
             </nav>
-            <ItemVenda skins={skins}/>
+            <ItemVenda skins={skins} categoryArmy={categoryArmy} />
         </div>
     )
 }
