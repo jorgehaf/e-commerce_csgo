@@ -30,17 +30,9 @@ const DeleteItem = (cart, army) => {
     }
 }
 
-const ChangeCart = (localCart) => {
-    return {
-        type: 'CHANGE_CART',
-        localCart
-    }
-}
-
 export default {
     Add,
     AddItem,
     RemoveItem,
-    DeleteItem,
-    ChangeCart
+    DeleteItem
 }
