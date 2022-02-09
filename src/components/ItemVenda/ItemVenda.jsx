@@ -3,7 +3,7 @@ import cartActions from "../../store/actions/cart";
 import "./ItemVenda.scss" 
 
 const ItemVenda = (props) => {
-    const cart = useSelector(state => state.cart.value)
+    const cart = useSelector(state => state.cart)
     const dispatch = useDispatch();
 
     return (
