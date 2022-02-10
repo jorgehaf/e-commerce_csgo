@@ -1,6 +1,7 @@
 #collectionArmy {
     display: flex;
     flex-wrap: wrap;
+    justify-content: center;
     grid-gap: 16px;
     padding: 16px;
 
@@ -17,7 +18,7 @@
         box-shadow: 0 0 3px rgba(0, 0, 0, 0.885);
         padding: 8px;
 
-        .price{
+        .price {
             font-size: 22px;
             color: #19211f;
         }
@@ -46,5 +47,53 @@
         -o-transform: scale(1.02);
         -ms-transform: scale(1.02);
         transform: scale(1.02);
+    }
+
+    .cardArmyCart {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-around;
+        width: 90%;
+        background-color: #ffffff;
+        filter: blur(0.2px);
+        border-radius: 4px;
+        box-shadow: 0 0 3px rgba(0, 0, 0, 0.885);
+        padding: 8px;
+
+        .infosArmy {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+
+            .priceName {
+                margin-left: 16px;
+
+                .price {
+                    font-size: 22px;
+                    color: #19211f;
+                }
+            }
+        }
+
+        .controllerAmount {
+            display: flex;
+            flex-direction: row;
+            border: 1px solid #19211f;
+            border-radius: 4px;
+
+            .itemController{
+                padding: 8px;
+            }
+
+            .addItem {
+                cursor: pointer;
+            }
+            
+            .removeItem {
+                cursor: pointer;
+            }
+        }
+
     }
 }
