@@ -30,9 +30,9 @@ const DeleteItem = (cart, army) => {
     }
 }
 
-const ModifyCart = (cart, army) => {
+const UpdateCart = (cart, army) => {
     return {
-        type: 'MODIFY_CART',
+        type: 'UPDATE_CART',
         cart,
         army
     }
@@ -43,5 +43,5 @@ export default {
     AddItem,
     RemoveItem,
     DeleteItem,
-    ModifyCart
+    UpdateCart
 }

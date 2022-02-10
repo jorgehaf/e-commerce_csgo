@@ -13,7 +13,7 @@ const Home = () => {
         const carregarSkins = async () => {
             const resposta = await axios.get("apiFake.json").then((suc) => { return suc.data }).catch((err) => { console.log(err) });
 
-            setSkins(skins.concat(resposta.skins))
+            setSkins(resposta)
         }
         carregarSkins();
     }, []);
@@ -27,7 +27,7 @@ const Home = () => {
                     <div className='itemNav' onClick={() => setCategoryArmy(3)}>SMG</div>
                 </div>
             </nav>
-            <ItemVenda skins={skins} categoryArmy={categoryArmy} />
+            <ItemVenda array={skins} categoryArmy={categoryArmy} screen={'Home'}/>
         </div>
     )
 }
