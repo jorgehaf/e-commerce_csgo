@@ -17,23 +17,24 @@ const Cart = () => {
     useEffect(() => {
         if (CartItems.cart.Cart.length > 0) {
             setLocalCart(CartItems.cart.Cart)
+            setTotalGunsPrice(CartItems.cart.totalGunsPrice)
         } else {
             let temporyCart = JSON.parse(localStorage.getItem('Cart'))
 
-            dispatch(cartActions.UpdateCart(temporyCart))
+            if (temporyCart) {
+                dispatch(cartActions.UpdateCart(temporyCart))
 
-            setLocalCart(temporyCart.Cart)
-            setTotalGunsPrice(temporyCart.totalGunsPrice)
+                setLocalCart(temporyCart.Cart)
+                setTotalGunsPrice(temporyCart.totalGunsPrice)
+            }
         }
     }, [])
 
     return (
         <div className="main">
             <ItemVenda array={localCart} screen={'Cart'} />
-            <div>Subtotal ({totalItems} {totalItems <= 1 ? 'item' : 'itens'}): {
-                CartItems.cart.Cart.length > 0 ?
-                    CartItems.cart.totalGunsPrice : totalGunsPrice
-            }</div>
+            <div>Subtotal ({totalItems} {totalItems <= 1 ? 'item' : 'itens'}): {'$' + totalGunsPrice}
+                {totalGunsPrice > 0 && <button className='buttonFinally'>Close order</button>}</div>
         </div>
     )
 }

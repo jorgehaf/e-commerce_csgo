@@ -52,7 +52,7 @@ export default function cart(state = INITIAL_STATE, action) {
             let indexArmyRemove = state.Cart.findIndex(
                 (el) => el.id === action.army.id
             );
-            if (state.Cart[indexArmyRemove].amount < 2){
+            if (state.Cart[indexArmyRemove].amount < 2) {
                 state.Cart.splice(indexArmyRemove, 1)
                 state.totalGunsPrice -= action.army.price;
             } else {
@@ -71,13 +71,21 @@ export default function cart(state = INITIAL_STATE, action) {
         case 'DELETE_ITEM':
             console.log('DELETE_ITEM')
             console.log(state, action)
+            let indexArmyDelete = state.Cart.findIndex(
+                (el) => el.id === action.army.id
+            );
+            console.log(state.Cart[indexArmyDelete])
+            state.Cart.splice(indexArmyDelete, 1)
+            state.totalGunsPrice -= action.army.totalGunPrice;
+
+
+            localStorage.setItem('Cart', JSON.stringify(state))
             return {
                 ...state,
             };
 
 
         case 'UPDATE_CART':
-            // console.log('UPDATE_CART')
             return {
                 ...action.cart
             };

@@ -26,25 +26,30 @@ const ItemVenda = (props) => {
                             </div>
                     )
                     :
-                    props.array.map(
-                        (army, index) =>
+                    <div className='collectionArmyCart'>{
+                        props.array.map(
+                            (army) =>
                             <div className='cardArmyCart' key={army.id}>
-                                <div className='infosArmy'>
-                                    <img src={army.image} alt={army.name} />
-                                    <div className='priceName'>
-                                        <div className="price">Price: {'$' + army.totalGunPrice}</div>
-                                        <div>
-                                            <div>{army.name}</div>
+                                    <div className='infosArmy'>
+                                        <img src={army.image} alt={army.name} />
+                                        <div className='priceName'>
+                                            <div className="price">Price: {'$' + army.totalGunPrice}</div>
+                                            <div>
+                                                <div>{army.name}</div>
+                                            </div>
                                         </div>
                                     </div>
+                                    <div className='controllerItem'>
+                                        <div className='controllerAmount'>
+                                            <div className='itemController addItem' onClick={() => dispatch(cartActions.AddItem(props.array, army))}>+</div>
+                                            <div className='itemController'>{army.amount}</div>
+                                            <div className='itemController removeItem' onClick={() => dispatch(cartActions.RemoveItem(props.array, army))}>-</div>
+                                        </div>
+                                        <div className='deleteItem' onClick={() => dispatch(cartActions.DeleteItem(props.array, army))}>Delete</div>
+                                    </div>
                                 </div>
-                                <div className='controllerAmount'>
-                                    <div className='itemController addItem' onClick={() => dispatch(cartActions.AddItem(props.array, army))}>+</div>
-                                    <div className='itemController'>{army.amount}</div>
-                                    <div className='itemController removeItem' onClick={() => dispatch(cartActions.RemoveItem(props.array, army))}>-</div>
-                                </div>
-                            </div>
-                    )
+                        )}
+                    </div>
 
             }
         </div>

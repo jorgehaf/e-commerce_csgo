@@ -1,4 +1,6 @@
 import React, { useState, useEffect } from 'react'
+import { useDispatch } from 'react-redux';
+import cartActions from "../../store/actions/cart";
 import axios from "axios";
 
 import ItemVenda from '../ItemVenda/ItemVenda';
@@ -8,6 +10,14 @@ import "./Home.scss"
 const Home = () => {
     const [skins, setSkins] = useState([]);
     const [categoryArmy, setCategoryArmy] = useState(1);
+    const dispatch = useDispatch();
+
+    useEffect(() => {
+        let temporyCart = JSON.parse(localStorage.getItem('Cart'))
+        if (temporyCart) {
+            dispatch(cartActions.UpdateCart(temporyCart))
+        }
+    }, [])
 
     useEffect(() => {
         const carregarSkins = async () => {
