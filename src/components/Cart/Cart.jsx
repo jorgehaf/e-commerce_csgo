@@ -5,36 +5,36 @@ import { useSelector, useDispatch } from 'react-redux';
 import ItemVenda from '../ItemVenda/ItemVenda';
 import "./Cart.scss"
 
-const Cart = () => {
-    const dispatch = useDispatch();
+const Cart = (props) => {
+    // const dispatch = useDispatch();
 
-    const [localCart, setLocalCart] = useState([])
-    const [totalGunsPrice, setTotalGunsPrice] = useState(0)
-    const [totalItems, setTotalItems] = useState(0)
+    // const [totalItems, setTotalItems] = useState(0)
+    // const [localCart, setLocalCart] = useState([])
+    // const [totalGunsPrice, setTotalGunsPrice] = useState(0)
 
-    const CartItems = useSelector(state => state)
+    // const CartItems = useSelector(state => state)
 
-    useEffect(() => {
-        if (CartItems.cart.Cart.length > 0) {
-            setLocalCart(CartItems.cart.Cart)
-            setTotalGunsPrice(CartItems.cart.totalGunsPrice)
-        } else {
-            let temporyCart = JSON.parse(localStorage.getItem('Cart'))
+    // useEffect(() => {
+    //     if (CartItems.cart.Cart.length > 0) {
+    //         setLocalCart(CartItems.cart.Cart)
+    //         setTotalGunsPrice(CartItems.cart.totalGunsPrice)
+    //     } else {
+    //         let temporyCart = JSON.parse(localStorage.getItem('Cart'))
 
-            if (temporyCart) {
-                dispatch(cartActions.UpdateCart(temporyCart))
+    //         if (temporyCart) {
+    //             dispatch(cartActions.UpdateCart(temporyCart))
 
-                setLocalCart(temporyCart.Cart)
-                setTotalGunsPrice(temporyCart.totalGunsPrice)
-            }
-        }
-    }, [])
+    //             setLocalCart(temporyCart.Cart)
+    //             setTotalGunsPrice(temporyCart.totalGunsPrice)
+    //         }
+    //     }
+    // }, [])
 
     return (
         <div className="main">
-            <ItemVenda array={localCart} screen={'Cart'} />
+            {/* <ItemVenda array={localCart} screen={'Cart'} />
             <div>Subtotal ({totalItems} {totalItems <= 1 ? 'item' : 'itens'}): {'$' + totalGunsPrice}
-                {totalGunsPrice > 0 && <button className='buttonFinally'>Close order</button>}</div>
+                {totalGunsPrice > 0 && <button className='buttonFinally'>Close order</button>}</div> */}
         </div>
     )
 }
