@@ -1,0 +1,52 @@
+#collectionArmy {
+    display: flex;
+    flex-wrap: wrap;
+    grid-gap: 16px;
+    padding: 16px;
+    overflow: auto;
+
+    .cardArmy {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-between;
+        max-height: 400px;
+        width: 300px;
+        background-color: #ffffff;
+        filter: blur(0.2px);
+        border-radius: 4px;
+        box-shadow: 0 0 3px rgba(0, 0, 0, 0.885);
+        padding: 8px;
+
+        .price {
+            font-size: 22px;
+            color: #19211f;
+        }
+
+        .infosArmy {
+
+            .button {
+                margin-top: 8px;
+                padding: 8px;
+                background-color: #19211f;
+                color: #ffffff;
+                border: 1px solid rgba(25, 33, 31, 0.679);
+                border-radius: 4px;
+                cursor: pointer;
+            }
+
+        }
+    }
+
+    .cardArmy:hover {
+        -webkit-transition: all 0.5s ease;
+        -moz-transition: all 0.5s ease;
+        transition: all 0.5s ease;
+        -moz-transform: scale(1.02);
+        -webkit-transform: scale(1.02);
+        -o-transform: scale(1.02);
+        -ms-transform: scale(1.02);
+        transform: scale(1.02);
+    }
+
+}

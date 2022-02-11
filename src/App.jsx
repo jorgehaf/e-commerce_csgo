@@ -12,7 +12,6 @@ import Home from './components/Home/Home'
 import Cart from './components/Cart/Cart'
 import './App.scss'
 
-
 const App = () => {
   const dispatch = useDispatch();
 

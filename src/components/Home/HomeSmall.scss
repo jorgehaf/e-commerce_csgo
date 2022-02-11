@@ -1,0 +1,24 @@
+.home {
+    display: flex;
+    flex-direction: row;
+    height: 90%;
+
+    #nav {
+        background-color: #19211f;
+        color: #F0F3F5;
+        font-size: 12px;
+
+        #navBar {
+            .itemNav {
+                margin: 24px;
+                cursor: pointer;
+            }
+        }
+    }
+
+    #collectionCard {
+        background-color: #7C7A7A;
+        display: flex;
+    }
+
+}

@@ -13,9 +13,7 @@ const ItemVenda = (props) => {
                         props.categoryArmy === army.category &&
                         <div className='cardArmy' key={army.id}>
                             <div className="price">Price: {'$' + army.price}</div>
-                            <div>
-                                <img src={army.image} alt={army.name} />
-                            </div>
+                            <img src={army.image} alt={army.name} />
                             <div className="infosArmy">
                                 <div>{army.name}</div>
                                 <div>

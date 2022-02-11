@@ -1,23 +1,7 @@
-.home {
-    display: flex;
-    flex-direction: row;
-    height: 90%;
+@media (max-width: 1007px) {
+    @import "HomeSmall.scss";
+}
 
-    #nav {
-        background-color: #19211f;
-        color: #F0F3F5;
-
-        #navBar {
-            .itemNav {
-                margin: 32px;
-                cursor: pointer;
-            }
-        }
-    }
-
-    #collectionCard {
-        background-color: #7C7A7A;
-        display: flex;
-    }
-
+@media (min-width: 1008px) {
+    @import "HomeLarge.scss";
 }
