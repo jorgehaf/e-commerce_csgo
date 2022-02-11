@@ -1,5 +1,6 @@
 const INITIAL_STATE = {
     totalGunsPrice: 0,
+    totalItems: 0,
     Cart: []
 }
 
@@ -20,10 +21,12 @@ export default function cart(state = INITIAL_STATE, action) {
                 };
                 state.Cart.push(objArmy);
                 state.totalGunsPrice += action.army.price;
+                state.totalItems += 1;
             } else {
                 state.Cart[indexArmy].amount += 1;
                 state.Cart[indexArmy].totalGunPrice += action.army.price;
                 state.totalGunsPrice += action.army.price;
+                state.totalItems += 1;
             }
 
 
@@ -40,6 +43,7 @@ export default function cart(state = INITIAL_STATE, action) {
             state.Cart[indexArmyAdd].amount += 1;
             state.Cart[indexArmyAdd].totalGunPrice += action.army.price;
             state.totalGunsPrice += action.army.price;
+            state.totalItems += 1;
 
 
             localStorage.setItem('Cart', JSON.stringify(state))
@@ -55,10 +59,12 @@ export default function cart(state = INITIAL_STATE, action) {
             if (state.Cart[indexArmyRemove].amount < 2) {
                 state.Cart.splice(indexArmyRemove, 1)
                 state.totalGunsPrice -= action.army.price;
+                state.totalItems -= 1;
             } else {
                 state.Cart[indexArmyRemove].amount -= 1;
                 state.Cart[indexArmyRemove].totalGunPrice -= action.army.price;
                 state.totalGunsPrice -= action.army.price;
+                state.totalItems -= 1;
             }
 
 
@@ -77,6 +83,7 @@ export default function cart(state = INITIAL_STATE, action) {
             console.log(state.Cart[indexArmyDelete])
             state.Cart.splice(indexArmyDelete, 1)
             state.totalGunsPrice -= action.army.totalGunPrice;
+            state.totalItems -= action.army.amount;
 
 
             localStorage.setItem('Cart', JSON.stringify(state))

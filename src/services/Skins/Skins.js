@@ -1,15 +1,14 @@
-import axios from "axios";
+import repository from "../../repository";
 
 const skins = {
-    getSkins: () => {
-        new Promise((resolve, reject) => {
-            axios.get("apiFake.json").then((suc) => {
-                resolve(suc.data)
-            }).catch((err) => {
-                reject(err)
-            })
 
-        });
+    getSkins: async () => {
+        try {
+            const skins = await repository.skins.getSkins();
+            return skins;
+        } catch (err) {
+            console.log(err)
+        }
     }
 
 }
