@@ -1,65 +1,7 @@
-.collectionArmy{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    width: 100%;
-    
-    .cardArmyCart {
-        display: flex;
-        flex-direction: row;
-        align-items: center;
-        justify-content: space-around;
-        width: 100%;
-        background-color: #ffffff;
-        filter: blur(0.2px);
-        border-radius: 4px;
-        box-shadow: 0 0 3px rgba(0, 0, 0, 0.885);
-        margin-bottom: 8px;
-        padding: 8px;
+@media (max-width: 1007px) {
+    @import "ItemCartSmall.scss";
+}
 
-        .infosArmy {
-            display: flex;
-            flex-direction: row;
-            align-items: center;
-
-            .priceName {
-                margin-left: 16px;
-
-                .price {
-                    font-size: 22px;
-                    color: #19211f;
-                }
-            }
-        }
-
-        .controllerItem{
-
-            .controllerAmount {
-                display: flex;
-                flex-direction: row;
-                border: 1px solid #19211f;
-                border-radius: 4px;
-    
-                .itemController{
-                    padding: 8px;
-                }
-    
-                .addItem {
-                    cursor: pointer;
-                }
-                
-                .removeItem {
-                    cursor: pointer;
-                }
-            }
-        
-            .deleteItem{
-                text-align: center;
-                padding: 8px;
-                cursor: pointer;
-            }
-        }
-
-
-    }
+@media (min-width: 1008px) {
+    @import "ItemCartLarge.scss";
 }

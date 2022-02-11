@@ -1,5 +1,6 @@
 import homeActions from "../../store/actions/home";
 import { useDispatch } from 'react-redux';
+import { useLocation } from 'react-router-dom'
 
 import "./Header.scss"
 import hamburgerMenu from "../../assets/Icons/IconsWhite/MenuWhite.svg"
@@ -7,13 +8,17 @@ import hamburgerMenu from "../../assets/Icons/IconsWhite/MenuWhite.svg"
 const Header = (props) => {
     const dispatch = useDispatch();
 
+    const location = useLocation();
+
     return (
         <header className="header">
 
             <div id="menuLogo">
-                <div id="hamburgerMenu">
+                { location.pathname === '/' &&
+                    <div id="hamburgerMenu">
                     <img onClick={() => dispatch(homeActions.displayHamburger())} src={hamburgerMenu} alt="Menu" />
                 </div>
+                }
                 <div className="logo">
                     <a href="/" id="title">
                         JORGIN GUNS
