@@ -1,6 +1,6 @@
 import "./Header.scss"
 
-const Header = () => {
+const Header = (props) => {
     return (
         <header className="header">
             <div className="logo">
