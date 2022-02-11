@@ -8,14 +8,13 @@ const Home = () => {
     const [skins, setSkins] = useState([]);
     const [categoryArmy, setCategoryArmy] = useState(1);
 
+    async function getSkins() {
+        let resp = await services.skins.getSkins()
+        setSkins(resp)
+        return resp;
+    }
     useEffect(() => {
-        services.skins.getSkins()
-            .then((suc) => {
-                setSkins(suc)
-            })
-            .catch((err) => {
-                console.log(err)
-            })
+        getSkins();
     }, []);
 
     return (
