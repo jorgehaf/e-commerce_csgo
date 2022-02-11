@@ -1,14 +1,11 @@
 import homeActions from "../../store/actions/home";
-import { useSelector, useDispatch } from 'react-redux';
+import { useDispatch } from 'react-redux';
 
 import "./Header.scss"
 import hamburgerMenu from "../../assets/Icons/IconsWhite/MenuWhite.svg"
-import { useEffect } from "react";
 
 const Header = (props) => {
     const dispatch = useDispatch();
-
-    const displayHamnurger = useSelector(state => state)
 
     return (
         <header className="header">
