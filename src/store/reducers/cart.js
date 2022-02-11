@@ -1,3 +1,7 @@
+import {
+    act
+} from "react-dom/cjs/react-dom-test-utils.production.min";
+
 const INITIAL_STATE = {
     totalGunsPrice: 0,
     totalItems: 0,
@@ -9,24 +13,27 @@ export default function cart(state = INITIAL_STATE, action) {
         case 'ADD_TO_CART':
             let indexArmy = state.Cart.findIndex(
                 (el) => el.id === action.army.id
-                );
-                if (indexArmy === -1) {
+            );
+            if (indexArmy === -1) {
                 let objArmy = {
                     id: action.army.id,
                     image: action.army.image,
                     name: action.army.name,
                     price: action.army.price,
                     totalGunPrice: action.army.price,
-                    amount: 1
+                    amount: 1,
+                    stock: action.army.stock
                 };
                 state.Cart.push(objArmy);
                 state.totalGunsPrice += action.army.price;
                 state.totalItems += 1;
             } else {
-                state.Cart[indexArmy].amount += 1;
-                state.Cart[indexArmy].totalGunPrice += action.army.price;
-                state.totalGunsPrice += action.army.price;
-                state.totalItems += 1;
+                if (state.Cart[indexArmy].stock > state.Cart[indexArmy].amount) {
+                    state.Cart[indexArmy].amount += 1;
+                    state.Cart[indexArmy].totalGunPrice += action.army.price;
+                    state.totalGunsPrice += action.army.price;
+                    state.totalItems += 1;
+                }
             }
 
 
@@ -40,10 +47,12 @@ export default function cart(state = INITIAL_STATE, action) {
             let indexArmyAdd = state.Cart.findIndex(
                 (el) => el.id === action.army.id
             );
-            state.Cart[indexArmyAdd].amount += 1;
-            state.Cart[indexArmyAdd].totalGunPrice += action.army.price;
-            state.totalGunsPrice += action.army.price;
-            state.totalItems += 1;
+            if (state.Cart[indexArmyAdd].stock > state.Cart[indexArmyAdd].amount) {
+                state.Cart[indexArmyAdd].amount += 1;
+                state.Cart[indexArmyAdd].totalGunPrice += action.army.price;
+                state.totalGunsPrice += action.army.price;
+                state.totalItems += 1;
+            }
 
 
             localStorage.setItem('Cart', JSON.stringify(state))
