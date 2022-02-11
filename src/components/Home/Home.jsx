@@ -4,7 +4,7 @@ import ItemVenda from '../ItemVenda/ItemVenda';
 import services from "../../services"
 import "./Home.scss"
 
-const Home = () => {
+const Home = (props) => {
     const [skins, setSkins] = useState([]);
     const [categoryArmy, setCategoryArmy] = useState(1);
 
@@ -26,7 +26,7 @@ const Home = () => {
                     <div className='itemNav' onClick={() => setCategoryArmy(3)}>SMG</div>
                 </div>
             </nav>
-            <ItemVenda array={skins} categoryArmy={categoryArmy} screen={'Home'} />
+            <ItemVenda arraySkins={skins} cart={props.cart} categoryArmy={categoryArmy} />
         </div>
     )
 }

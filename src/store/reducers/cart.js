@@ -9,8 +9,8 @@ export default function cart(state = INITIAL_STATE, action) {
         case 'ADD_TO_CART':
             let indexArmy = state.Cart.findIndex(
                 (el) => el.id === action.army.id
-            );
-            if (indexArmy === -1) {
+                );
+                if (indexArmy === -1) {
                 let objArmy = {
                     id: action.army.id,
                     image: action.army.image,
@@ -32,7 +32,7 @@ export default function cart(state = INITIAL_STATE, action) {
 
             localStorage.setItem('Cart', JSON.stringify(state))
             return {
-                ...state,
+                ...state
             };
 
 
@@ -75,12 +75,9 @@ export default function cart(state = INITIAL_STATE, action) {
 
 
         case 'DELETE_ITEM':
-            console.log('DELETE_ITEM')
-            console.log(state, action)
             let indexArmyDelete = state.Cart.findIndex(
                 (el) => el.id === action.army.id
             );
-            console.log(state.Cart[indexArmyDelete])
             state.Cart.splice(indexArmyDelete, 1)
             state.totalGunsPrice -= action.army.totalGunPrice;
             state.totalItems -= action.army.amount;

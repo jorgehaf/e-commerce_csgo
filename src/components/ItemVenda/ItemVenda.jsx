@@ -8,7 +8,7 @@ const ItemVenda = (props) => {
     return (
         <div id="collectionArmy">
             {
-                props.array.map(
+                props.arraySkins.map(
                     (army) =>
                         props.categoryArmy === army.category &&
                         <div className='cardArmy' key={army.id}>
@@ -19,7 +19,7 @@ const ItemVenda = (props) => {
                             <div className="infosArmy">
                                 <div>{army.name}</div>
                                 <div>
-                                    <button className="button" onClick={() => dispatch(cartActions.Add(props.array, army))}>Add to cart</button>
+                                    <button className="button" onClick={() => dispatch(cartActions.Add(props.cart, army))}>Add to cart</button>
                                 </div>
                             </div>
                         </div>

@@ -8,7 +8,7 @@ const ItemCart = (props) => {
     return (
         <div className="collectionArmy">
             {
-                props.cart.map(
+                props.cart.Cart.map(
                     (army) =>
                         <div className='cardArmyCart' key={army.id}>
                             <div className='infosArmy'>
@@ -22,11 +22,11 @@ const ItemCart = (props) => {
                             </div>
                             <div className='controllerItem'>
                                 <div className='controllerAmount'>
-                                    <div className='itemController addItem' onClick={() => dispatch(cartActions.AddItem(props.array, army))}>+</div>
+                                    <div className='itemController addItem' onClick={() => dispatch(cartActions.AddItem(props.cart, army))}>+</div>
                                     <div className='itemController'>{army.amount}</div>
-                                    <div className='itemController removeItem' onClick={() => dispatch(cartActions.RemoveItem(props.array, army))}>-</div>
+                                    <div className='itemController removeItem' onClick={() => dispatch(cartActions.RemoveItem(props.cart, army))}>-</div>
                                 </div>
-                                <div className='deleteItem' onClick={() => dispatch(cartActions.DeleteItem(props.array, army))}>Delete</div>
+                                <div className='deleteItem' onClick={() => dispatch(cartActions.DeleteItem(props.cart, army))}>Delete</div>
                             </div>
                         </div>
                 )}
