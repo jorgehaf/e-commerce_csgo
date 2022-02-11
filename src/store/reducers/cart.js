@@ -1,7 +1,3 @@
-import {
-    act
-} from "react-dom/cjs/react-dom-test-utils.production.min";
-
 const INITIAL_STATE = {
     totalGunsPrice: 0,
     totalItems: 0,
