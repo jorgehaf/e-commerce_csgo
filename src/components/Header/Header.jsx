@@ -13,15 +13,16 @@ const Header = (props) => {
     return (
         <header className="header">
 
-            <div id="hamburgerMenu">
-                <img onClick={() => dispatch(homeActions.displayHamburger())} src={hamburgerMenu} alt="Menu" />
-            </div>
-
-            <div className="logo">
-                <a href="/" id="title">
-                    JORGIN GUNS
-                </a>
-                <div id="description">The better at cenary!</div>
+            <div id="menuLogo">
+                <div id="hamburgerMenu">
+                    <img onClick={() => dispatch(homeActions.displayHamburger())} src={hamburgerMenu} alt="Menu" />
+                </div>
+                <div className="logo">
+                    <a href="/" id="title">
+                        JORGIN GUNS
+                    </a>
+                    <div id="description">The better at cenary!</div>
+                </div>
             </div>
             <div className="account">
                 <a href="/cart">

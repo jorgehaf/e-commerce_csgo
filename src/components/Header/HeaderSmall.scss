@@ -1,15 +1,22 @@
 .header {
   display: flex;
   flex-direction: row;
-  justify-content: space-around;
+  justify-content: space-between;
   background-color: #19211f;
   color: #f0f3f5;
   height: 10%;
   font-size: 12px;
+  padding: 0 32px;
+
+  #menuLogo{
+    display: flex;
+    flex-direction: row;
+  }
 
   #hamburgerMenu {
     display: flex;
     align-items: center;
+    margin-right: 8px;
     img {
       width: 32px;
       cursor: pointer;

@@ -1,41 +1,72 @@
 .header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  background-color: #19211f;
+  color: #f0f3f5;
+  height: 10%;
+  padding: 0 32px;
+
+  #menuLogo{
     display: flex;
     flex-direction: row;
-    justify-content: space-around;
-    background-color: #19211f;
-    color: #F0F3F5;
-    height: 10%;
+  }
 
-    #hamburgerMenu{
-        display: none;
+  #hamburgerMenu {
+    display: flex;
+    align-items: center;
+    margin-right: 8px;
+
+    img {
+      width: 32px;
+      cursor: pointer;
     }
+  }
 
-    .logo {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        #title {
-            color: #F0F3F5;
-            font-size: 24px;
-            background-color: #1C2826;
-            border-radius: 8px;
-            text-align: center;
-            padding: 4px 16px;
-            text-decoration: none;
-        }
+  .logo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    #title {
+      color: #f0f3f5;
+      font-size: 24px;
+      background-color: #1c2826;
+      border-radius: 8px;
+      text-align: center;
+      padding: 4px 16px;
+      text-decoration: none;
     }
+  }
 
-    .account {
+  .account {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+
+    a {
+      color: #f0f3f5;
+      margin: 16px;
+      text-decoration: none;
+
+      .nameCart {
         display: flex;
         flex-direction: row;
         align-items: center;
-        justify-content: center;
-        
-        a {
-            color: #F0F3F5;
-            margin: 16px;
-            text-decoration: none;
+
+        .totalItems {
+          background-color: rgb(255, 255, 255);
+          border-radius: 12px;
+          color: #1c2826;
+          font: bold 15px/13px Helvetica, Verdana, Tahoma;
+          height: 16px;
+          min-width: 14px;
+          padding: 4px 3px 0 3px;
+          text-align: center;
+          margin-left: 4px;
         }
+      }
     }
+  }
 }
