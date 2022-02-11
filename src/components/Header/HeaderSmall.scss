@@ -7,6 +7,15 @@
     height: 10%;
     font-size: 12px;
 
+    #hamburgerMenu{
+        display: flex;
+        align-items: center;
+        display: none;
+        img{
+            width: 32px;
+        }
+    }
+
     .logo {
         display: flex;
         flex-direction: column;

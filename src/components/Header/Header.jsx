@@ -1,8 +1,12 @@
 import "./Header.scss"
+import hamburgerMenu from "../../assets/Icons/IconsWhite/MenuWhite.svg"
 
 const Header = (props) => {
     return (
         <header className="header">
+            <div id="hamburgerMenu">
+                <img src={hamburgerMenu} alt="" />
+            </div>
             <div className="logo">
                 <a href="/" id="title">
                     JORGIN GUNS
