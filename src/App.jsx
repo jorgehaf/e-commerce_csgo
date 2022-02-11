@@ -16,41 +16,31 @@ import './App.css'
 const App = () => {
   const dispatch = useDispatch();
 
-  const [localCart, setLocalCart] = useState({
-    totalGunsPrice: 0,
-    totalItems: 0,
-    Cart: []
-  })
-
   const CartItems = useSelector(state => state)
 
   useEffect(() => {
-    if (CartItems.cart.Cart.length > 0) {
-      setLocalCart(CartItems.cart)
-    } else {
-      let temporyCart = JSON.parse(localStorage.getItem('Cart'))
-
-      if (temporyCart) {
-        dispatch(cartActions.UpdateCart(temporyCart))
-
-        setLocalCart(temporyCart)
-      } else {
-        setLocalCart(CartItems)
-      }
-    }
+    captureCart();
   }, [])
+
+  function captureCart() {
+    let temporyCart = JSON.parse(localStorage.getItem('Cart'))
+
+    if (temporyCart) {
+      dispatch(cartActions.UpdateCart(temporyCart))
+    }
+  }
 
   return (
     <div id='app'>
-      <Header id="header" totalItems={localCart.totalItems} />
+      <Header id="header" totalItems={CartItems.cart.totalItems} />
       <Routes id="routes">
         <Route path="/"
           element={
-            <Home cart={localCart} />
+            <Home cart={CartItems.cart} />
           } />
         <Route path="/Cart"
           element={
-            <Cart cart={localCart} />
+            <Cart cart={CartItems.cart} />
           } />
       </Routes>
     </div>

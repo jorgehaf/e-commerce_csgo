@@ -11,7 +11,7 @@ const Header = (props) => {
             </div>
             <div className="account">
                 <a href="/cart">
-                    <div>Cart</div>
+                    <div>Cart{'(' + props.totalItems + ')'}</div>
                 </a>
                 <a href="">
                     <div>My account</div>

@@ -1,0 +1,19 @@
+.main{
+    padding: 24px;
+
+    #subTotal{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        margin-top: 8px;
+        align-items: center;
+        button{
+            background-color: #19211f;
+            color: rgb(255, 255, 255);
+            border: 0;
+            height: 32px;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+    }
+}
