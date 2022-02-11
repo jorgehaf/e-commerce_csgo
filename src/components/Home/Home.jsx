@@ -1,5 +1,7 @@
 import React, { useState, useEffect } from 'react'
 import { useSelector } from 'react-redux';
+import homeActions from "../../store/actions/home";
+import { useDispatch } from 'react-redux';
 
 import ItemVenda from '../ItemVenda/ItemVenda';
 import services from "../../services"
@@ -9,6 +11,7 @@ const Home = (props) => {
     const [skins, setSkins] = useState([]);
     const [categoryArmy, setCategoryArmy] = useState(1);
 
+    const dispatch = useDispatch();
     const displayHamnurger = useSelector(state => state)
 
     async function getSkins() {
@@ -16,6 +19,12 @@ const Home = (props) => {
         setSkins(resp)
         return resp;
     }
+
+    function actionClickItemNav(categoryArmy) {
+        setCategoryArmy(categoryArmy)
+        dispatch(homeActions.displayHamburger())
+    }
+
     useEffect(() => {
         getSkins();
     }, []);
@@ -25,9 +34,9 @@ const Home = (props) => {
             {displayHamnurger.home.displayHamburger &&
                 <nav id="nav">
                     <div id='navBar'>
-                        <div className='itemNav' onClick={() => setCategoryArmy(1)}>Rifles</div>
-                        <div className='itemNav' onClick={() => setCategoryArmy(2)}>Pistolas</div>
-                        <div className='itemNav' onClick={() => setCategoryArmy(3)}>SMG</div>
+                        <div className='itemNav' onClick={() => actionClickItemNav(1)}>Rifles</div>
+                        <div className='itemNav' onClick={() => actionClickItemNav(2)}>Pistolas</div>
+                        <div className='itemNav' onClick={() => actionClickItemNav(3)}>SMG</div>
                     </div>
                 </nav>
             }
